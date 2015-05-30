@@ -10,8 +10,10 @@ def fxn18():
 	numbers = [[int(j) for j in i] for i in numbers]
 
 	start = time.clock()
+	# goes bottom-up
 	for i in range(len(numbers) - 2, -1,-1):
-		# replaces the values of the triangle to be the partial maximum sums
+		# replaces the values of the triangle to be the partial maximum sums 
+		# the value at the top is the maximum sum
 		for j in range(i+1):
 			numbers[i][j] += max(numbers[i+1][j],numbers[i+1][j+1])
 
