@@ -44,5 +44,5 @@ def fxn11():
             if len(temp2) == length:
                max_val = max(max_val,reduce(operator.mul,temp2,1))
          temp2 = []                             
-               
+
    print (str(max_val) + " in " + str(time.clock() - start) + " seconds. ")
