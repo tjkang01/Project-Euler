@@ -3,16 +3,12 @@ import time
 # 2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
 # What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
 
-def fxn5(lbound, ubound):
-# basically do prime factorization for all numbers from 2 (lowerbound) - upperbound
-# keep dictionary that has the prime factorizations, but updates only if new values are added
-# first check if key/prime factor is in dict, then check quant
-# if dict_quant < prime factorization quant, + by difference
-# i.e. up to 8 is {2:2 ...} but 8 is {2:3}, so the former -> {2:3, ...}
+# calculates prime factorization of the desired number
+def fxn5():
 	start = time.clock()
 	if lbound == 1:
 		lbound += 1
-	divisors = range (lbound, ubound + 1)
+	divisors = range(lbound, ubound + 1)
 	base = 2; product = 1; primes = []; freq = []; count = 0; factorization = {}; total = 1
 	for i in divisors:
 		placeholder = i
@@ -39,5 +35,4 @@ def fxn5(lbound, ubound):
 					factorization[key] = factorization.get(key) + 1
 	for keys, vals in factorization.items():
 		total *= (keys ** vals)
-	end = time.clock()
-	print(str(factorization) + " or " + str(total) + " in " + str(end-start) + " seconds. ")
+	print(str(factorization) + " or " + str(total) + " in " + str(time.clock()-start) + " seconds. ")

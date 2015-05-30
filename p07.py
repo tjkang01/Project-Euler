@@ -14,10 +14,8 @@ def fxn7(x):
 	start = time.clock()
 	primes = []
 	n = 1
-	
 	while len(primes) <= x:
 		if primality(n):
 			primes.append(n)
 		n += 1	
-	end = time.clock()	
-	print (str(primes) + " in " + str(end-start) + " seconds. ")
+	print (str(primes) + " in " + str(time.clock()-start) + " seconds. ")

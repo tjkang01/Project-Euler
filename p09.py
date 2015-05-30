@@ -12,5 +12,4 @@ def fxn9(target_sum):
 		for j in range(1, upper):
 			k = target_sum - i - j
 			if i ** 2 + j ** 2 == k ** 2:
-				end = time.clock()
-				return (str(i*j*k) + " in " + str(end-start) + " seconds.")
+				return (str(i*j*k) + " in " + str(time.clock()-start) + " seconds.")

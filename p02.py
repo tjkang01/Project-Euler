@@ -6,10 +6,6 @@ import time
 # 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
 # By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
 
-# 1. Use memoization to increase efficiency in the form of a dictionary that will be appended
-# 2. Calculate the next Fibonacci term until it is greater than the defined upper bound 
-# 3. Sort all the even/odd digits into their respective lists and sum them
-
 # even-valued terms
 # limit is the value which the last term of the Fibonacci sequence cannot exceed
 def fxn2e(start1, start2, limit):
@@ -27,6 +23,7 @@ def fxn2e(start1, start2, limit):
 	else:
 		evens = []		
 	for n in range(2, limit+1):
+		# employs memoization to increase efficiency
 		computed[n] = computed[n-1] + computed[n-2]
 		last_dig = computed.values()[-1]
 		if last_dig < limit: 
@@ -34,8 +31,7 @@ def fxn2e(start1, start2, limit):
 				evens.append(last_dig)
 		else: 
 			break
-	end = time.clock()
-	print(str(sum(evens)) + " in " + str(end-start) + " seconds. ")	
+	print(str(sum(evens)) + " in " + str(time.clock()-start) + " seconds. ")	
 
 # odd-valued terms
 def fxn2o(start1, start2, limit):
@@ -53,6 +49,7 @@ def fxn2o(start1, start2, limit):
 	else:
 		odds = []		
 	for n in range(2, limit+1):
+		# employs memoization to increase efficiency
 		computed[n] = computed[n-1] + computed[n-2]
 		last_dig = computed.values()[-1]
 		if last_dig < limit: 
@@ -60,8 +57,7 @@ def fxn2o(start1, start2, limit):
 				odds.append(last_dig)
 		else: 
 			break		
-	end = time.clock()
-	print(str(sum(odds)) + " in " + str(end-start) + " seconds. ")	
+	print(str(sum(odds)) + " in " + str(time.clock()-start) + " seconds. ")	
 
 # prints out the Fibonacci sequence under a given value with starting terms (0,1), (1,1), or (1,2)
 def fib(start1, start2, limit):

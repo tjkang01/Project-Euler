@@ -16,5 +16,4 @@ def fxn10(x):
 	for i in range(2,x):
 		if primality(i):
 			total += i
-	end = time.clock()
-	print (str(total) + " in " + str(end-start) + " seconds. ")
+	print (str(total) + " in " + str(time.clock()-start) + " seconds. ")

@@ -8,7 +8,7 @@ import time
 # What is the value of this product?
 
 def fxn8():
-	# gets file with very long number
+	# number is saved in txt file called "p08.txt"
 	f = open(raw_input('Enter a file name: '), "r")
 	number = map(int,f.read())
 	f.close()
@@ -16,14 +16,12 @@ def fxn8():
 	max_val = 1
 
 	start = time.clock()
-
 	for i in range(len(number) - length + 1):
 		temp = number[i:i+length]
-		# potential optimization: if 0 detected, skip forward some indices forward
-		if 0 not in temp:
-			temp_val = reduce(operator.mul,temp,1)
-			if temp_val > max_val:
-				max_val = temp_val
-
-	end = time.clock()			
-	print(str(max_val) + " in " + str(end-start) + " seconds. ")
+		if 0 in temp: 
+			temp = number[i + 12:i + 12 + length]
+			if 0 not in temp:
+				temp_val = reduce(operator.mul,temp,1)
+				if temp_val > max_val:
+					max_val = temp_val
+	print(str(max_val) + " in " + str(time.clock()-start) + " seconds. ")
