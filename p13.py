@@ -6,6 +6,7 @@ import time
 def fxn13():
 	with open(raw_input('Enter a filename:'), "r") as f:
    		content = f.read().splitlines()
+   	f.close()	
    	length = int(raw_input('How many digits: '))
    	start = time.clock()
    	numbers = [int(i) for i in content]

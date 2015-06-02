@@ -8,7 +8,11 @@ import time
 
 # even-valued terms
 # limit is the value which the last term of the Fibonacci sequence cannot exceed
-def fxn2e(start1, start2, limit):
+def fxn2e():
+	limit = int(raw_input("Enter limit: "))
+	start1 = int(raw_input("Enter first Fibonacci number: "))
+	start2 = int(raw_input("Enter second Fibonacci number: "))
+
 	start = time.clock()
 	s = 0
 	computed = {0: start1, 1: start2}
@@ -34,7 +38,11 @@ def fxn2e(start1, start2, limit):
 	print(str(sum(evens)) + " in " + str(time.clock()-start) + " seconds. ")	
 
 # odd-valued terms
-def fxn2o(start1, start2, limit):
+def fxn2o():
+	limit = int(raw_input("Enter limit: "))
+	start1 = int(raw_input("Enter first Fibonacci number: "))
+	start2 = int(raw_input("Enter second Fibonacci number: "))
+	
 	start = time.clock()
 	s = 0
 	computed = {0: start1, 1: start2}
@@ -66,5 +74,6 @@ def fib(start1, start2, limit):
 		computed[n] = computed[n-1] + computed[n-2]
 		last_dig = computed.values()[-1]
 		if last_dig > limit: 
+			del computed[n]
 			break
 	print computed.values()						

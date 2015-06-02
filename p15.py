@@ -8,7 +8,9 @@ import time
 # Because the problem limits movement to some combination of right and down, it boils down to simple combinatorics.
 # For any given grid, it takes 2 * (length of one side) steps to go from one corner to another
 
-def fxn15(x):
+def fxn15():
+	x = int(raw_input("Enter length of one side of square grid: "))
+	
 	start = time.clock()
 	total = math.factorial(x * 2)
 	overlap = math.factorial(x) * math.factorial(x)

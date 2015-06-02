@@ -25,6 +25,8 @@ def length(y, record = {1:1}):
 		record[y] = length(collatz(y)) + 1
 	return record[y]	
 
-def fxn14(x):
+def fxn14():
+	x = int(raw_input("Enter limit: "))
+	
 	start = time.clock()
 	print(str(max(range(1,x), key=length)) + " in " + str(time.clock() - start) + " seconds. ")

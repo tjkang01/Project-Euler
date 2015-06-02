@@ -13,12 +13,14 @@ import time
 # How many Sundays fell on the first of the month during the twentieth century (1 Jan 1901 to 31 Dec 2000)?
 
 
-def fxn19(start, end, desired_day):
-	start_time = time.clock()
+def fxn19():
+	desired_day = int(raw_input("Enter the day by its index: "))
+
+	start = time.clock()
 	count = 0
 	# 1 Jan 1901 was a Tuesday
 	day = 2
-	for year in range(start, end + 1):
+	for year in range(1901, 2000 + 1):
 		if (year % 4 == 0) and ((year % 100 != 0) or (year % 400 == 0)):
 			months = [31,29,31,30,31,30,31,31,30,31,30,31]
 		else:

@@ -6,7 +6,10 @@ import inflect
 # If all the numbers from 1 to 1000 (one thousand) inclusive were written out in words, how many letters would be used?
 
 # okay, I cheated a bit with the inflect library, but no shame.
-def fxn17(x,y):
+def fxn17():
+	x = int(raw_input("Enter lower bound: "))
+	y = int(raw_input("Enter upper bound: "))
+	
 	start = time.clock()
 	p = inflect.engine()
 	words = []

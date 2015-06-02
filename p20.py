@@ -9,7 +9,9 @@ import time
 
 # Find the sum of the digits in the number 100!
 
-def fxn20(x):
+def fxn20():
+	x = int(raw_input("Enter number: "))
+	
 	start = time.clock()
 	number = str(math.factorial(x))
 	total = 0

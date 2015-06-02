@@ -19,7 +19,9 @@ import time
 # We can see that 28 is the first triangle number to have over five divisors.
 # What is the value of the first triangle number to have over five hundred divisors?
 
-def fxn12(x):
+def fxn12():
+	x = int(raw_input("Enter the number of divisors: "))
+	
 	index = 1
 	count = 2
 	start = time.clock()

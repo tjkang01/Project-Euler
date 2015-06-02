@@ -10,12 +10,14 @@ def primality(y):
 			return False
 	return True	
 
-def fxn7(x):
+def fxn7():
+	x = int(raw_input("Enter the nth prime you want: "))
+	
 	start = time.clock()
 	primes = []
 	n = 1
 	while len(primes) <= x:
 		if primality(n):
 			primes.append(n)
-		n += 1	
+		n += 1
 	print (str(primes) + " in " + str(time.clock()-start) + " seconds. ")

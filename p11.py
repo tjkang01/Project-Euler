@@ -11,6 +11,7 @@ import operator
 def fxn11():
    with open(raw_input('Enter a filename:'), "r") as f:
       content = f.read().splitlines()
+   f.close() 
    length = int(raw_input('How many adjacent digits: '))
    numbers = [i.split() for i in content]
    numbers = [[int(j) for j in i] for i in numbers]

@@ -5,6 +5,9 @@ import time
 
 # calculates prime factorization of the desired number
 def fxn5():
+	lbound = int(raw_input("Enter lower bound: "))
+	ubound = int(raw_input("Enter upper bound: "))
+
 	start = time.clock()
 	if lbound == 1:
 		lbound += 1

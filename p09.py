@@ -5,7 +5,9 @@ import time
 # There exists exactly one Pythagorean triplet for which a + b + c = 1000.
 # Find the product abc.
 
-def fxn9(target_sum):
+def fxn9():
+	target_sum = int(raw_input("Enter the sum of the Pythagorean triplet: "))
+
 	start = time.clock()
 	upper = int(math.ceil((target_sum+1)/2 ** 0.5))
 	for i in range(1, upper):

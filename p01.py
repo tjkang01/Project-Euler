@@ -18,7 +18,11 @@ def LCM(x,y):
 def Gauss(x):
 	return (x * (x+1))/2
 
-def fxn1(limit, multiple1, multiple2): 
+def fxn1(): 
+	limit = int(raw_input("Enter the limit: "))
+	multiple1 = int(raw_input("Enter first multiple: "))
+	multiple2 = int(raw_input("Enter second multiple: "))
+
 	start = time.clock()
 	multiple3 = LCM(multiple1, multiple2)
 	# calculates the number of times each multiple has to be repeated 

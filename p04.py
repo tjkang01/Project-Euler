@@ -13,7 +13,10 @@ def is_palindrome(x):
 		return False	
 
 # returns all palindromes between the limits
-def fxn4(lbound,ubound):
+def fxn4():
+	lbound = int(raw_input("Enter lower bound: "))
+	ubound = int(raw_input("Enter upper bound: "))
+
 	start = time.clock()
 	palindromes = [] 
 	nums = range(lbound, ubound + 1)

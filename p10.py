@@ -10,7 +10,9 @@ def primality(y):
 			return False
 	return True	
 
-def fxn10(x):
+def fxn10():
+	x = int(raw_input("Enter the limit: "))
+
 	start = time.clock()
 	total = 0
 	for i in range(2,x):

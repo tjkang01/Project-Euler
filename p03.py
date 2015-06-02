@@ -5,7 +5,9 @@ import time
 # What is the largest prime factor of the number 600851475143?
 
 # returns prime factorization
-def fxn3(x):  
+def fxn3():  
+	x = int(raw_input("Enter number: "))
+	
  	start = time.clock()
 	base = 2; product = 1; placeholder = x; primes = []; freq = []; count = 0; 
 	while product != x:
@@ -19,5 +21,5 @@ def fxn3(x):
 			freq.append(count)	
 		base += 1
 		count = 0
-	prime_factorization = dict((primes, freq))
+	prime_factorization = dict(zip(primes, freq))
 	print(str(prime_factorization) + " in " + str(time.clock()-start) + " seconds. ")	
