@@ -27,6 +27,7 @@ def pfactorization(x):
 def sum_of_divisor(x,y):
 	return (x ** (y+1) - 1)/(x-1)
 
+# sum of proper divisors
 def product_fxn(x): 
 	total = 1
 	primes = pfactorization(x)
