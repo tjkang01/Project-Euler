@@ -8,3 +8,18 @@ import time
 def fxn24():
 	first = int(raw_input("Enter first number: "))
 	last = int(raw_input("Enter last number: "))
+	perm = int(raw_input("Enter desired index: ")) - 1
+
+	start = time.clock()
+	num_to_add = range(first,last)
+	permut = range(first,last)
+	number = ''
+
+	while len(permut) != 0:
+		temp = permut[-1]
+		permut.remove(temp)
+		index = perm/math.factorial(temp)
+		number = number + str(num_to_add[index])
+		num_to_add.remove(num_to_add[index])
+		perm = perm % math.factorial(temp)
+	print(number + " in " + str(time.clock() - start) + " seconds. ")	
