@@ -9,17 +9,14 @@ def fxn3():
 	x = int(raw_input("Enter number: "))
 	
  	start = time.clock()
-	base = 2; product = 1; placeholder = x; primes = []; freq = []; count = 0; 
-	while product != x:
-		while (placeholder % base == 0):
-			if base not in primes:
-				primes.append(base)
-			placeholder /= base
-			product *= primes[-1]
-			count += 1
-		if count != 0:		
-			freq.append(count)	
-		base += 1
-		count = 0
-	prime_factorization = dict(zip(primes, freq))
-	print(str(prime_factorization) + " in " + str(time.clock()-start) + " seconds. ")	
+ 	base = 2; product = 1; placeholder = x; factorization = {};
+ 	while product != x:
+ 		count = 0
+ 		if (placeholder % base == 0):
+ 			while (placeholder % base == 0):
+ 				placeholder /= base
+ 				product *= base
+ 				count += 1
+ 			factorization[base] = count
+ 		base += 1
+	print(str(factorization) + " in " + str(time.clock()-start) + " seconds. ")	
